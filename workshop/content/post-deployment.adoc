@@ -47,7 +47,7 @@ oc patch -n openshift-ingress-operator ingresscontroller/default --patch '{"spec
 ingresscontroller.operator.openshift.io/default patched
 ----
 
-## Config authentication with httpd
+#### Config authentication with httpd
 
 ----
 sudo yum install httpd-tools
