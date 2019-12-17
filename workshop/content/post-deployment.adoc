@@ -1,7 +1,7 @@
 
 Some steps is needed after cluster is up.
 
-Check the certificates:
+#### Check the certificates:
 
 ----
 [root@infra-services ocp]# oc get csr
@@ -27,7 +27,7 @@ certificatesigningrequest.certificates.k8s.io/csr-rthw9 approved
 certificatesigningrequest.certificates.k8s.io/csr-zmtj4 approved
 ----
 
-Set registry storage:
+#### Set registry storage storage:
 
 ----
 oc patch configs.imageregistry.operator.openshift.io cluster --type merge --patch '{"spec":{"storage":{"emptyDir":{}}}}'
@@ -38,8 +38,39 @@ oc patch configs.imageregistry.operator.openshift.io cluster --type merge --patc
 In production environments set the registry storage with some supported persistent storage such OCS or NFS.
 ====
 
+#### Set ingress configuration
 
+----
 oc get -n openshift-ingress-operator ingresscontrollers/default -o jsonpath='{$.spec.replicas}'
-
+2
 oc patch -n openshift-ingress-operator ingresscontroller/default --patch '{"spec":{"replicas": 1}}' --type=merge
 ingresscontroller.operator.openshift.io/default patched
+----
+
+## Config authentication with httpd
+
+----
+sudo yum install httpd-tools
+htpasswd -c -B -b users.htpasswd admin 'r3dh4t1!'
+oc create secret generic htpass-secret --from-file=htpasswd=users.htpasswd -n openshift-config
+
+cat <<EOF > htpasswd-conf.yml
+apiVersion: config.openshift.io/v1
+kind: OAuth
+metadata:
+  name: cluster
+spec:
+  identityProviders:
+  - name: my_htpasswd_provider 
+    mappingMethod: claim 
+    type: HTPasswd
+    htpasswd:
+      fileData:
+        name: htpass-secret 
+EOF
+
+oc apply -f htpasswd-conf.yml
+oc adm policy add-cluster-role-to-user cluster-admin admin
+
+oc delete secrets kubeadmin -n kube-system
+----
