@@ -1,5 +1,5 @@
 WORKSHOP_NAME=lab-ocp4-vsphere
-WORKSHOP_IMAGE=quay.io/gfontana/lab-ocp4-vsphere/lab-ocp4-vsphere:ocp-4.2
+WORKSHOP_IMAGE=image-registry.openshift-image-registry.svc:5000/ocp4-vsphere-workshop/lab-ocp4-vsphere:ocp-4.2
 WORKSHOP_TITLE="OpenShift 4.2 on vSphere"
 WORKSHOP_DESCRIPTION="Deploying OpenShift 4.2 on vSphere"
 WORKSHOP_FILE="ocp4-vsphere-workshop.yml"
