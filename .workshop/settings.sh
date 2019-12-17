@@ -7,5 +7,5 @@ CONSOLE_IMAGE=quay.io/openshift/origin-console:4.2
 RESOURCE_BUDGET=x-large
 MAX_SESSION_AGE=7200
 IDLE_TIMEOUT=300
-SPAWNER_MODE=hosted-workshop
+SPAWNER_MODE=learning-portal
 OPENSHIFT_PROJECT="ocp4-vsphere-workshop"
