@@ -1,0 +1,15 @@
+---
+name: Starter Labs (OpenShift 4 on vSphere)
+description: Deploying OpenShift 4 on vSphere - Hands-on Lab
+
+modules:
+  activate:
+  - overview
+  - prerequisites
+  - ignition
+  - vsphere-import-ova
+  - deploy
+  - post-deployment
+  - troubleshooting  
+  - common-further-resources
+  - common-workshop-links
