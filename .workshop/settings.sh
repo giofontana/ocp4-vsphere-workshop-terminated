@@ -2,6 +2,7 @@ WORKSHOP_NAME=lab-ocp4-vsphere
 WORKSHOP_IMAGE=quay.io/gfontana/lab-ocp4-vsphere/lab-ocp4-vsphere:ocp-4.2
 WORKSHOP_TITLE="OpenShift 4.2 on vSphere"
 WORKSHOP_DESCRIPTION="Deploying OpenShift 4.2 on vSphere"
+WORKSHOP_FILE="ocp4-vsphere-workshop.yml"
 CONSOLE_IMAGE=quay.io/openshift/origin-console:4.2
 RESOURCE_BUDGET=x-large
 MAX_SESSION_AGE=7200
