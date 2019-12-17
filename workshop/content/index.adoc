@@ -3,29 +3,13 @@
 
 ### Modules:
 
-link:overview.adoc[Deployment Overview]!
+link:overview.adoc[Deployment Overview] ++
+link:prerequisites.adoc[Prerequisites Preparation] ++
+link:ignition.adoc[Generating Install Files] ++
+link:vsphere-import-ova.adoc[Import OVA on vSphere] ++
+link:deploy.adoc[Deploy Cluster on vSphere] ++
+link:post-deployment.adoc[Post deployment configuration] ++
+link:troubleshooting.adoc[Troubleshooting tips] ++
+link:common-further-resources.adoc[Further Resources] ++
+link:common-workshop-links.adoc[Workshop Links]
 
-overview:
-        name: Deployment Overview
-        exit_sign: Prerequisites Preparation
-    prerequisites:
-        name: Prerequisites Preparation
-        exit_sign: Generating Install Files
-    ignition:
-        name: Generating Install Files
-        exit_sign: Import OVA on vSphere
-    vsphere-import-ova:
-        name: Import OVA on vSphere
-        exit_sign: Deploy Cluster on vSphere
-    deploy:
-        name: Deploy Cluster on vSphere
-        exit_sign: Post Deployment Tasks       
-    post-deployment:
-        name: Post deployment configuration
-    troubleshooting:
-        name: Troubleshooting tips
-    common-further-resources:
-        name: Further Resources
-        exit_sign: Finish Workshop
-    common-workshop-links:
-        name: Workshop Links
