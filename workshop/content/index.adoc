@@ -1,0 +1,31 @@
+
+# OpenShift 4.2 on vSphere
+
+### Modules:
+
+link:overview.adoc[Deployment Overview]!
+
+overview:
+        name: Deployment Overview
+        exit_sign: Prerequisites Preparation
+    prerequisites:
+        name: Prerequisites Preparation
+        exit_sign: Generating Install Files
+    ignition:
+        name: Generating Install Files
+        exit_sign: Import OVA on vSphere
+    vsphere-import-ova:
+        name: Import OVA on vSphere
+        exit_sign: Deploy Cluster on vSphere
+    deploy:
+        name: Deploy Cluster on vSphere
+        exit_sign: Post Deployment Tasks       
+    post-deployment:
+        name: Post deployment configuration
+    troubleshooting:
+        name: Troubleshooting tips
+    common-further-resources:
+        name: Further Resources
+        exit_sign: Finish Workshop
+    common-workshop-links:
+        name: Workshop Links

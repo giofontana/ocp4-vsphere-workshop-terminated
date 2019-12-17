@@ -110,7 +110,7 @@ After you get the above INFO message, the bootstrap machine can be safely remove
 
 This process can take up to 20 minutes. If you don't get this message, see some troubleshooting tips here link:troubleshooting.adoc[]!
 
-After bootstrap competition, run the follwing command to check the installation progress:
+After bootstrap competition, run the following command to check the installation progress:
 
 ----
 [user0@infra-services ocp]$ openshift-install wait-for install-complete --log-level debug
