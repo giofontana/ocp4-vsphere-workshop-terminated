@@ -108,7 +108,7 @@ INFO It is now safe to remove the bootstrap resources
 
 After you get the above INFO message, the bootstrap machine can be safely removed. 
 
-This process can take up to 20 minutes. If you don't get this message, see some troubleshooting tips here link:troubleshooting[]!
+This process can take up to 20 minutes. If you don't get this message, see some troubleshooting tips here link:troubleshooting.adoc[]!
 
 After bootstrap competition, run the follwing command to check the installation progress:
 
